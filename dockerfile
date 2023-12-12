@@ -13,4 +13,4 @@ RUN mkdir /app
 WORKDIR /app
 COPY . /app
 
-CMD python manage.py migrate && gunicorn app.wsgi --bind 0.0.0.0:80 --workers 1
+CMD python manage.py migrate && gunicorn project_django.wsgi --bind 0.0.0.0:80 --workers 1
